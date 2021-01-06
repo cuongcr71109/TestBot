@@ -15,14 +15,14 @@ env:
     - variable
   secrets-manager:
     key: secret-id:json-key:version-stage:version-id
-  git-credential-helper: no | yes
+  git-credential-helper:  yes
 
 proxy:
-  upload-artifacts: no | yes
+  upload-artifacts: yes
   logs: no | yes
 
 batch:
-  fast-fail: false | true
+  fast-fail:  true
   # build-list:
   # build-matrix:
   # build-graph:
@@ -69,14 +69,14 @@ reports:
       - location
       - location
     base-directory: location
-    discard-paths: no | yes
+    discard-paths:  yes
     file-format: report-format
 artifacts:
   files:
     - location
     - location
   name: artifact-name
-  discard-paths: no | yes
+  discard-paths:  yes
   base-directory: location
   secondary-artifacts:
     artifactIdentifier:
@@ -84,13 +84,13 @@ artifacts:
         - location
         - location
       name: secondary-artifact-name
-      discard-paths: no | yes
+      discard-paths: yes
       base-directory: location
     artifactIdentifier:
       files:
         - location
         - location
-      discard-paths: no | yes
+      discard-paths:  yes
       base-directory: location
 cache:
   paths:
